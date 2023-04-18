@@ -44,4 +44,4 @@ ax.set_zlabel("Z Axis")
 ax.set_title("Lorenz Attractor")
 
 
-st.pyplot(ax)
+st.pyplot(ax.figure)
