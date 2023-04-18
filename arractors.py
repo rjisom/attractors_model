@@ -64,7 +64,7 @@ def createPlot(title, attractorType):
 
 plot1 = createPlot('Lorenz Attractor',lorenz)
 plot2 = createPlot('Dadras Attractor',dadras)
-plot3 = createPlot('Halverson Attractor',havlerson)
+plot3 = createPlot('Halverson Attractor',halvorsen)
 
 st.pyplot(plot1.figure)
 st.pyplot(plot2.figure)
