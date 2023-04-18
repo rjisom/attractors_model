@@ -45,7 +45,7 @@ def halvorsen(xyz, *, a=1.89):
 
 def createPlot(title, attractorType):
     xyzs = np.empty((num_steps + 1, 3))  # Need one more for the initial values
-    xyzs[0] = (0., 1., 1.05)  # Set initial values
+    xyzs[0] = (-1.48, -1.51, 2.04)  # Set initial values
     # Step through "time", calculating the partial derivatives at the current point
     # and using them to estimate the next point
     for i in range(num_steps):
