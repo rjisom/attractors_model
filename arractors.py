@@ -65,7 +65,7 @@ def createPlot(title, attractorType):
     ax.set_zlabel("Z Axis")
     ax.set_title(title)
      
-    return np.array([x_dot, y_dot, z_dot])
+    return (ax.figure)
 
 plot1 = createPlot('Lorenz Attractor',lorenz)
 plot2 = createPlot('Dadras Attractor',dadras)
