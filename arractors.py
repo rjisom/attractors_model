@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-
+import matplotlib.animation as animation
 
 def lorenz(xyz, *, s=10, r=28, b=2.667):
     """
@@ -43,5 +43,7 @@ ax.set_ylabel("Y Axis")
 ax.set_zlabel("Z Axis")
 ax.set_title("Lorenz Attractor")
 
+# Creating the Animation object
+ani = animation.FuncAnimation(ax, num_steps, interval=100)
 
-st.pyplot(ax.figure)
+st.pyplot(ani)
