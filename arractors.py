@@ -42,9 +42,9 @@ def dadras(xyz, *, a=3, b=2.7, c=1.7, d=2, e=9):
        Values of the Dadras attractor's partial derivatives at *xyz*.
     """
     x, y, z = xyz
-    x_dot = y-ax+byz
-    y_dot = cy-xz+z
-    z_dot = xdxy-ez
+    x_dot = y-a*x+b*y*z
+    y_dot = c*y-x*z+z
+    z_dot = d*x*y-e*z
     
     return np.array([x_dot, y_dot, z_dot])
 
