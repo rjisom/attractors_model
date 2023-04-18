@@ -37,15 +37,11 @@ for i in range(num_steps):
 # Plot
 ax = plt.figure().add_subplot(projection='3d')
 
-ax.plot(*xyzs.T, lw=0.5)
+ax.plot(*xyzs.T, lw=0.5, color=red)
 ax.set_xlabel("X Axis")
 ax.set_ylabel("Y Axis")
 ax.set_zlabel("Z Axis")
 ax.set_title("Lorenz Attractor")
 
-skipframes = int(num_steps/200)
-if skipframes == 0:
-     skipframes = 1
-ani1 = animation.FuncAnimation(ax, animate, frames=range(0,num_steps,skipframes), interval=30, blit = True, repeat = False)
 
-st.pyplot(ax.ani1)
+st.pyplot(ax.figure)
