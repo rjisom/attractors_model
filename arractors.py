@@ -68,7 +68,7 @@ def createPlot(title, attractorType):
     return np.array([x_dot, y_dot, z_dot])
 
 plot1 = createPlot('Lorenz Attractor',lorenz)
-plot2 = createPLot(('Dadras Attractor',dadras)
+plot2 = createPlot('Dadras Attractor',dadras)
 
 st.pyplot(plot1.figure)
 st.pyplot(plot2.figure)
