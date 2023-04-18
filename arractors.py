@@ -37,7 +37,7 @@ for i in range(num_steps):
 # Plot
 ax = plt.figure().add_subplot(projection='3d')
 
-ax.plot(*xyzs.T, lw=0.5, color=red)
+ax.plot(*xyzs.T, lw=0.5, color='red')
 ax.set_xlabel("X Axis")
 ax.set_ylabel("Y Axis")
 ax.set_zlabel("Z Axis")
