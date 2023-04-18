@@ -37,9 +37,9 @@ def dadras(xyz, *, a=3, b=2.7, c=1.7, d=2, e=9):
 
 def halvorsen(xyz, *, a=1.89):
     x, y, z = xyz
-    x_dot = (−1*a)*x−4*y−4*z−y*2
-    y_dot = (−1*a)a*y−4*z−4*x−z*2
-    z_dot = (−1*a)a*z−4*x−4*y−x*2
+    x_dot = (-1*a)*x−4*y−4*z−y*2
+    y_dot = (−1*a)*y−4*z−4*x−z*2
+    z_dot = (−1*a)*z−4*x−4*y−x*2
     
     return np.array([x_dot, y_dot, z_dot])
 
