@@ -39,7 +39,7 @@ def halvorsen(xyz, *, a=1.89):
     x, y, z = xyz
     x_dot = ((a)*-1)*x+(y*-4)+(z*-4)-(y**2)
     y_dot = ((a)*-1)*y+(z*-4)+(x*-4)-(z**2)
-    z_dot = ((a)*-1))*z+(x*-4)+(y*-4)+(x**2)
+    z_dot = ((a)*-1)*z+(x*-4)+(y*-4)+(x**2)
     
     return np.array([x_dot, y_dot, z_dot])
 
