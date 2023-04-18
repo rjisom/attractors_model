@@ -27,6 +27,27 @@ def lorenz(xyz, *, s=10, r=28, b=2.667):
     
     return np.array([x_dot, y_dot, z_dot])
 
+def dadras(xyz, *, a=3, b=2.7, c=1.7, d=2, e=9):
+    """
+    Parameters
+    ----------
+    xyz : array-like, shape (3,)
+       Point of interest in three-dimensional space.
+    s, r, b : float
+       Parameters defining the Dadras attractor.
+
+    Returns
+    -------
+    xyz_dot : array, shape (3,)
+       Values of the Dadras attractor's partial derivatives at *xyz*.
+    """
+    x, y, z = xyz
+    x_dot = y-ax+byz
+    y_dot = cy-xz+z
+    z_dot = xdxy-ez
+    
+    return np.array([x_dot, y_dot, z_dot])
+
 def createPlot(title, attractorType):
     xyzs = np.empty((num_steps + 1, 3))  # Need one more for the initial values
     xyzs[0] = (0., 1., 1.05)  # Set initial values
@@ -44,8 +65,10 @@ def createPlot(title, attractorType):
     ax.set_zlabel("Z Axis")
     ax.set_title(title)
      
-    return ax.figure
+    return np.array([x_dot, y_dot, z_dot])
 
 plot1 = createPlot('Lorenz Attractor',lorenz)
+plot2 = createPLot(('Dadras Attractor',dadras)
 
 st.pyplot(plot1.figure)
+st.pyplot(plot2.figure)
