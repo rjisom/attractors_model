@@ -43,9 +43,9 @@ ax.set_ylabel("Y Axis")
 ax.set_zlabel("Z Axis")
 ax.set_title("Lorenz Attractor")
 
-skipframes = int(len(x)/200)
+skipframes = int(len(num_steps)/200)
 if skipframes == 0:
      skipframes = 1
-ani1 = animation.FuncAnimation(ax, animate, frames=range(0,len(x),skipframes), interval=30, blit = True, repeat = False)
+ani1 = animation.FuncAnimation(ax, animate, frames=range(0,len(num_steps),skipframes), interval=30, blit = True, repeat = False)
 
 st.pyplot(ax.ani1)
