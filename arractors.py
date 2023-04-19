@@ -9,12 +9,12 @@ st.divider()
 dt = 0.01
 num_steps = 10000
 st.header('Lorenz Attractor')
-st.write('OG code from: https://matplotlib.org/stable/gallery/mplot3d/lorenz_attractor.html#sphx-glr-gallery-mplot3d-lorenz-attractor-py')
+
 st.latex(r'''
       \begin{align}
-      \{dx/dt} & = \sigma(y-x) \\
-      \{dy/dt} & = \rho x - y - xz \\
-      \{dz/dt} & = -\beta z + xy
+      \dx/dt & = \sigma(y-x) \\
+      \dy/dt & = \rho x - y - xz \\
+      \dz/dt & = -\beta z + xy
       \end{align}
 ''')
  
@@ -76,6 +76,7 @@ def createPlots(title, attractorType):
     return (ax.figure)
 
 plot1 = createPlots('Lorenz Attractor',lorenz)
+st.write('OG code from: https://matplotlib.org/stable/gallery/mplot3d/lorenz_attractor.html#sphx-glr-gallery-mplot3d-lorenz-attractor-py')
 plot2 = createPlots('Dadras Attractor',dadras)
 plot3 = createPlots('Halverson Attractor',halvorsen)
 
