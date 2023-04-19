@@ -7,9 +7,7 @@ import matplotlib.animation as animation
 st.title('Exploring Attractors')
 dt = 0.01
 num_steps = 10000
-st.write('OG code taken from
-st.markdown('Streamlit is **_really_ cool**.')
-st.markdown(”This text is :red[colored red], and this is **:blue[colored]** and bold.”)
+
 st.markdown(''':[$$\begin{cases} dx/dt = \sigma(-x+y) \\
       dy/dt = -xz+\rho x-y) \\
       dz/dt = xy+\beta z) \\
