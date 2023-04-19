@@ -8,10 +8,12 @@ st.title('Exploring Attractors')
 dt = 0.01
 num_steps = 10000
 
-st.latex(r''':[$\begin{cases} dx/dt = \sigma(-x+y) \\
-      dy/dt = -xz+\rho x-y) \\
-      dz/dt = xy+\beta z) \\
-       \end{cases}] are the a Lorenz equations.
+st.latex(r'''
+      \begin{align}
+      \dot{x} & = \sigma(y-x) \\
+      \dot{y} & = \rho x - y - xz \\
+      \dot{z} & = -\beta z + xy
+      \end{align}
 ''')
  
 def lorenz(xyz, *, s=10, r=28, b=2.667):
