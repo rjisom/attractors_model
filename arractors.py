@@ -12,7 +12,7 @@ st.markdown(''':[$$\begin{cases} dx/dt = \sigma(-x+y) \\
       dy/dt = -xz+\rho x-y) \\
       dz/dt = xy+\beta z) \\
        \end{cases}] are the a Lorenz equations.
-'''
+''')
  
 def lorenz(xyz, *, s=10, r=28, b=2.667):
     """
