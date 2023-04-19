@@ -3,9 +3,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+#Streamlit title
+st.title('Exploring Attractors')
 dt = 0.01
 num_steps = 10000
-
+st.write('OG code taken from
+st.markdown('Streamlit is **_really_ cool**.')
+st.markdown(”This text is :red[colored red], and this is **:blue[colored]** and bold.”)
+st.markdown(''':[$$\begin{cases} dx/dt = \sigma(-x+y) \\
+      dy/dt = -xz+\rho x-y) \\
+      dz/dt = xy+\beta z) \\
+       \end{cases}] are the a Lorenz equations.
+'''
+            {x^2+y^2}=1$] are the a Lorenz equations.")
 def lorenz(xyz, *, s=10, r=28, b=2.667):
     """
     Parameters
@@ -43,7 +53,8 @@ def halvorsen(xyz, *, a=1.89):
     
     return np.array([x_dot, y_dot, z_dot])
 
-def createPlot(title, attractorType):
+def createPlots(title, attractorType):
+    plotsxyz =[]
     xyzs = np.empty((num_steps + 1, 3))  # Need one more for the initial values
     xyzs[0] = (0., 1., 1.05)  # Set initial values
     # Step through "time", calculating the partial derivatives at the current point
@@ -62,9 +73,9 @@ def createPlot(title, attractorType):
      
     return (ax.figure)
 
-plot1 = createPlot('Lorenz Attractor',lorenz)
-plot2 = createPlot('Dadras Attractor',dadras)
-plot3 = createPlot('Halverson Attractor',halvorsen)
+plot1 = createPlots('Lorenz Attractor',lorenz)
+plot2 = createPlots('Dadras Attractor',dadras)
+plot3 = createPlots('Halverson Attractor',halvorsen)
 
 st.pyplot(plot1.figure)
 st.pyplot(plot2.figure)
