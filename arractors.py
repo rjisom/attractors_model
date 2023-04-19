@@ -12,9 +12,9 @@ st.header('Lorenz Attractor')
 
 st.latex(r'''
       \begin{align}
-      \dx/dt & = \sigma(y-x) \\
-      \dy/dt & = \rho x - y - xz \\
-      \dz/dt & = -\beta z + xy
+      dx/dt & = \sigma(y-x) \\
+      dy/dt & = \rho x - y - xz \\
+      dz/dt & = -\beta z + xy
       \end{align}
 ''')
  
@@ -76,10 +76,10 @@ def createPlots(title, attractorType):
     return (ax.figure)
 
 plot1 = createPlots('Lorenz Attractor',lorenz)
-st.write('OG code from: https://matplotlib.org/stable/gallery/mplot3d/lorenz_attractor.html#sphx-glr-gallery-mplot3d-lorenz-attractor-py')
 plot2 = createPlots('Dadras Attractor',dadras)
 plot3 = createPlots('Halverson Attractor',halvorsen)
 
 st.pyplot(plot1.figure)
+st.write('OG code from: https://matplotlib.org/stable/gallery/mplot3d/lorenz_attractor.html#sphx-glr-gallery-mplot3d-lorenz-attractor-py')
 st.pyplot(plot2.figure)
 st.pyplot(plot3.figure)
