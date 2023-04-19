@@ -8,7 +8,7 @@ st.title('Exploring Attractors')
 dt = 0.01
 num_steps = 10000
 
-st.markdown(r''':[$\begin{cases} dx/dt = \sigma(-x+y) \\
+st.latex(r''':[$\begin{cases} dx/dt = \sigma(-x+y) \\
       dy/dt = -xz+\rho x-y) \\
       dz/dt = xy+\beta z) \\
        \end{cases}] are the a Lorenz equations.
